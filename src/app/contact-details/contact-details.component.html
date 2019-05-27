@@ -1,0 +1,14 @@
+<h1 style="text-align:left">
+  CONTACT DETAILS
+</h1>
+<div *ngIf="contactDetail" class="">
+  <div>{{ contactDetail.id }}</div>
+  <div>{{ contactDetail.name | firstUpperCaseLetter }}</div>
+  <div>{{ contactDetail.lastName | firstUpperCaseLetter }}</div>
+  <div>{{ contactDetail.phone }}</div>
+  <div>{{ contactDetail.email }}</div>
+  <div>
+    <button (click)="onDeleteClick()">Delete Contact</button>
+    <button routerLink="">Go to Contacts List</button>
+  </div>
+</div>

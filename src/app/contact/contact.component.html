@@ -1,0 +1,9 @@
+<div class="contact">
+  <div>{{ contact.id }}</div>
+  <div>{{ contact.name | firstUpperCaseLetter }}</div>
+  <div>{{ contact.lastName | firstUpperCaseLetter }}</div>
+  <div>{{ contact.phone }}</div>
+  <div>{{ contact.email }}</div>
+  <button (click)="onDeleteClick()">Delete Contact</button>
+  <button routerLink="/contacts/{{ contact.id }}">Details</button>
+</div>

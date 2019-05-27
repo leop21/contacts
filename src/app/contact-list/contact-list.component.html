@@ -1,0 +1,9 @@
+<h1 style="text-align:left">
+  CONTACTS
+</h1>
+<button routerLink="/createContact">Add Contact</button>
+<div class="contact-list">
+  <div *ngFor="let contact of contacts">
+    <app-contact (deleted)="loadContacts()" [contact]="contact"></app-contact>
+  </div>
+</div>

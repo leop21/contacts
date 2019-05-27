@@ -1,0 +1,27 @@
+<h1 style="text-align:left">
+  ADD CONTACT
+</h1>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div>
+    Name:
+    <input type="text" formControlName="name"> {{ contactForm.controls.name.value && !contactForm.controls.name.valid ? 'Invalid Contact Name' : '' }}
+  </div>
+  <div>
+      Last Name:
+      <input type="text" formControlName="lastName"> {{ contactForm.controls.lastName.value && !contactForm.controls.lastName.valid ? 'Invalid Contact Last Name' : '' }}
+  </div>
+  <div>
+    ID Number:
+    <input type="text" formControlName="id">
+  </div>
+  <div>
+    Phone Number:
+    <input type="text" formControlName="phone">
+  </div>
+  <div>
+    E-mail:
+    <input type="text" formControlName="email"> {{ contactForm.controls.email.value && !contactForm.controls.email.valid ? 'Invalid Contact Email' : '' }}
+  </div>
+  <button type="button" routerLink="">Cancel</button>
+  <button type="submit" [disabled]="!contactForm.valid">Add Contact</button>
+</form>
